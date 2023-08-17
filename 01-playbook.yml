@@ -6,4 +6,11 @@
        msg: "Hi from play1 of task"  
     - name: printing hi from task2 of play1
       ansible.builtin.debug:
-       msg: "Hi from play2 of task1"  
+       msg: "Devops learning"  
+
+- name: play2
+  hosts: all
+  tasks:
+    - name: printing hi from play2
+      ansible.builtin.debug:
+       msg: "message printing from play2" 
