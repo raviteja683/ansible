@@ -3,7 +3,7 @@
 
 - name: print the server OS name
   hosts: all
-  gather_facts:
+  gather_facts
   tasks:
     - name: OS of the machine is 
       ansible.builtin.debug:
