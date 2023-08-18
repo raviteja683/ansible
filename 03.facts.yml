@@ -1,7 +1,12 @@
-#  To run the code: ansible -i inv all -m setup -e ansible_username=centos -e ansible_password=DevOps321
+#  to get the facts: ansible -i inv all -m setup -e ansible_username=centos -e ansible_password=DevOps321
+# to run the script: ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 03.facts.yml
 - name: print the server OS name
   hosts: all
   tasks:
     - name: OS of the machine is 
       ansible.builtin.debug:
         msg: OS is {{ansible_distribution}}
+
+    - name: Printing the mac addres
+      ansible.builtin.debug:
+        msg: Mac address of the node is {{ansible_default_ipv4.macaddress}}
