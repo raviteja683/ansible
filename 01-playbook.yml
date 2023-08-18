@@ -1,3 +1,6 @@
+# ansible -i inv all -e ansible_username=centos -e ansible_password=DevOps321 -m shell -a uptime
+# -m : module -i: inventory -a: arugumnet
+# To run the playbook: ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yml
 - name: play1
   hosts: all
   tasks:
