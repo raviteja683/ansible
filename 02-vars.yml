@@ -6,4 +6,8 @@
     - name: printing URL name
       ansible.builtin.debug:
         msg: URL is {{URL}}
+    - name: printing URL name
+      ansible.builtin.debug:
+        msg: URL is {{URL}}
+
   
