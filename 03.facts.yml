@@ -1,9 +1,8 @@
 #  to get the facts: ansible -i inv all -m setup -e ansible_username=centos -e ansible_password=DevOps321
 # to run the script: ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 03.facts.yml
-
 - name: print the server OS name
   hosts: all
-  gather_facts: no
+ # gather_facts: no ---> to stop the facts (server names etc, then you won't get data )
   tasks:
     - name: OS of the machine is 
       ansible.builtin.debug:
