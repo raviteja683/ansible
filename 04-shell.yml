@@ -13,4 +13,4 @@
 
     - name: print Uptime rc value
       ansible.builtin.debug:
-        msg: Uptime value is {{EXITCODE}} # i want only stdout value from JSON
+        msg: Uptime rc value is {{EXITCODE}} # i want only stdout value from JSON
