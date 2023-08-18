@@ -3,3 +3,7 @@
   tasks:
     - name: using shell module
       ansible.builtin.shell: uptime
+      register: OUT #printing the shell output you need to register first
+    - name: print output value
+      ansible.builtin.debug:
+        msg: Uptime value is : {{OUT}}
