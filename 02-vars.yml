@@ -4,7 +4,7 @@
     URL: play.google.com
   vars_files:
     # - dev.yml
-    - {{ENV}}.yml # argument input while running the script
+    - "{{ENV}}".yml # argument input while running the script
   vars_prompt:
     - name: URNAME
       prompt: what is your name?
