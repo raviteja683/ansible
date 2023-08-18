@@ -1,8 +1,9 @@
 # To run the script: ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e ENV=prod 02-vars.yml
+# argument variable > local variable > global variable : priority
 - name: Demo on variable using in playbook
   hosts: all
   vars:
-    URL: play.google.com
+    URL: global.variable.com   
   vars_files:
     # - dev.yml
     - "{{ENV}}.yml" # argument input while running the script
@@ -16,12 +17,12 @@
         msg: URL is "{{URL}}"
     - name: printing argument Variable
       ansible.builtin.debug:
-        msg: URL is {{URL}}
+        msg: URL is {{URL}} # argument variable 
     - name: printing Local Variable
       ansible.builtin.debug:
         msg: URL is {{URL}}
       vars:
-        URL: task.google.com
+        URL: local.variable.com
     - name: printing use of prompt input
       ansible.builtin.debug:
         msg: My name is {{URNAME}}
