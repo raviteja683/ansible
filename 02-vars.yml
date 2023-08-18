@@ -2,6 +2,8 @@
   hosts: all
   vars:
     URL: play.google.com
+  vars_files:
+    - dev.yml
   vars_prompt:
     - name: URNAME
       prompt: what is your name?
@@ -21,6 +23,9 @@
     - name: printing use of prompt input
       ansible.builtin.debug:
         msg: My name is {{URNAME}}
+    - name: using files and get the input
+      ansible.builtin.debug:
+        msg: type of INSTANCE is {{INSTANCE_TYPE}}
       
     
       
