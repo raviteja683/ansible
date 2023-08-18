@@ -3,13 +3,13 @@
   vars:
     URL: play.google.com
   tasks:
-    - name: printing URL name
+    - name: printing Global variable
       ansible.builtin.debug:
         msg: URL is "{{URL}}"
-    - name: printing URL name
+    - name: printing argument Variable
       ansible.builtin.debug:
         msg: URL is {{URL}}
-    - name: printing URL name
+    - name: printing Local Variable
       ansible.builtin.debug:
         msg: URL is {{URL}}
       vars:
