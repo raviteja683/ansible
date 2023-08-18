@@ -1,0 +1,7 @@
+#  To run the code: ansible -i inv all -m setup -e ansible_username=centos -e ansible_password=DevOps321
+- name: print the server OS name
+  hosts: all
+  tasks:
+    - name: OS of the machine is 
+      ansible.builtin.debug:
+        msg: OS is {{ansible_distribution}}
