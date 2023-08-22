@@ -18,3 +18,8 @@
       ansible.builtin.debug:
         msg: When action is only true, then it will be print
       when: action
+    
+    - name: checking variable statement
+      ansible.builtin.debug:
+        msg: When action is only true, then it will be print
+      when: action is defined
