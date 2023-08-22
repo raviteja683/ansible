@@ -5,25 +5,31 @@
     - name: this is frontend
       ansible.builtin.debug:
         msg: this is frontend
+      tags: frontend
 
     - name: frontend start
       ansible.builtin.debug:
         msg: frontend start
+      tags: frontend
 
     - name: this is backend
       ansible.builtin.debug:
         msg: this is backend
+      tags: backend
 
     - name: backend start
       ansible.builtin.debug:
         msg: backend start
+      tags: backend
 
     - name: this is db
       ansible.builtin.debug:
         msg: this is db
+      tags: db 
 
     - name: db start
       ansible.builtin.debug:
         msg: db start
+      tags: db
 
     
