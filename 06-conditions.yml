@@ -1,5 +1,7 @@
 - name: Demo on conditions
   hosts: all
+  vars:
+    action: true
  # gather_facts: no ---> to stop the facts (server names etc, then you won't get data )
   tasks:
     - name: OS of the machine is 
@@ -11,3 +13,8 @@
       ansible.builtin.debug:
         msg: OS is {{ansible_distribution}}
       when: ansible_distribution == "ubuntu"
+
+    - name: checking variable statement
+      ansible.builtin.debug:
+        msg: When action is only true, then it will be print
+      when: action
