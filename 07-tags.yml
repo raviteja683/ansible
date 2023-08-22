@@ -1,0 +1,29 @@
+# how to control group of task that are specific to task, by using tags we can control them.
+- name: Demo on tags
+  hosts: all
+  tasks:
+    - name: this is frontend
+      ansible.builtin.debug:
+        msg: this is frontend
+
+    - name: frontend start
+      ansible.builtin.debug:
+        msg: frontend start
+
+    - name: this is backend
+      ansible.builtin.debug:
+        msg: this is backend
+
+    - name: backend start
+      ansible.builtin.debug:
+        msg: backend start
+
+    - name: this is db
+      ansible.builtin.debug:
+        msg: this is db
+
+    - name: db start
+      ansible.builtin.debug:
+        msg: db start
+
+    
