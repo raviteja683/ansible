@@ -1,0 +1,16 @@
+#if you want provide root access then you need provide 'become: yes'
+
+- name: Prividing privilige acces
+  hosts: all
+  tasks:
+    - name: using shell module
+      ansible.builtin.shell: uptime
+      register: OUT #printing the shell output you need to register first
+    - name: print output value
+      ansible.builtin.debug:
+        msg: Uptime value is {{OUT.stdout}} # i want only stdout value from JSON
+    - name: declaring the variable
+      set_fact:
+        EXITCODE: "{{OUT.rc}}" #rc is in json data
+
+    

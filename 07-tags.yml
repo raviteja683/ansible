@@ -1,4 +1,5 @@
 # how to control group of task that are specific to task, by using tags we can control them.
+# to run script: ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 07-tags.yml -t db
 - name: Demo on tags
   hosts: all
   tasks:
