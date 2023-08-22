@@ -1,0 +1,13 @@
+- name: Demo on conditions
+  hosts: all
+ # gather_facts: no ---> to stop the facts (server names etc, then you won't get data )
+  tasks:
+    - name: OS of the machine is 
+      ansible.builtin.debug:
+        msg: OS is {{ansible_distribution}}
+      when: ansible_distribution == "centos"
+
+    - name: OS of the machine is 
+      ansible.builtin.debug:
+        msg: OS is {{ansible_distribution}}
+      when: ansible_distribution == "ubuntu"
