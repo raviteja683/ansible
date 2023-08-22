@@ -2,7 +2,7 @@
 
 - name: Prividing privilige acces
   hosts: all
-  become: yes
+  become: yes #for root acces
   tasks:
     - name: checking user id
       ansible.builtin.shell: id
