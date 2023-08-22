@@ -1,4 +1,4 @@
-- name: play1
+- name: installing any package
   hosts: all
   become: yes
   tasks:
@@ -6,3 +6,6 @@
       ansible.builtin.package:
         name: nginx
         state: present
+
+#  State:  Whether to install (present), or remove (absent) a package.
+#  You can use other states like latest ONLY if they are supported by the underlying package module(s) executed.

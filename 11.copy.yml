@@ -1,0 +1,8 @@
+- name: copy a file using copy module
+  hosts: all
+  become: yes
+  tasks:
+    - name: copy a file from local machine to remote machine
+      ansible.builtin.copy:
+        src: inv
+        dest: /home/centos/inv
