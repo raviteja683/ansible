@@ -5,7 +5,7 @@
     - name: OS of the machine is 
       ansible.builtin.debug:
         msg: OS is {{ansible_distribution}}
-      when: ansible_distribution == "CentOs"
+      when: ansible_distribution == "CentOS"
 
     - name: OS of the machine is 
       ansible.builtin.debug:
