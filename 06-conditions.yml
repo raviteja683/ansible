@@ -1,7 +1,7 @@
 - name: Demo on conditions
   hosts: all
   vars:
-    action: true
+    action: false
  # gather_facts: no ---> to stop the facts (server names etc, then you won't get data )
   tasks:
     - name: OS of the machine is 
