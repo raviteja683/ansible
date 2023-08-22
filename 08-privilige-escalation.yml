@@ -3,14 +3,12 @@
 - name: Prividing privilige acces
   hosts: all
   tasks:
-    - name: using shell module
-      ansible.builtin.shell: uptime
+    - name: checking user id
+      ansible.builtin.shell: id
       register: OUT #printing the shell output you need to register first
     - name: print output value
       ansible.builtin.debug:
-        msg: Uptime value is {{OUT}} # i want only stdout value from JSON
-    - name: declaring the variable
-      set_fact:
-        EXITCODE: "{{OUT.rc}}" #rc is in json data
+        msg: Uptime value is {{OUT}} 
+    
 
     
