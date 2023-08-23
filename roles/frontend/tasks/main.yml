@@ -32,6 +32,6 @@
     daemon_reload: yes
 
 - name: configuring service name to server
-  ansible.builtin.shell: set hostname {{COMPONENT}}-{{ENV}}
+  ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}
     
    
