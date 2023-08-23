@@ -8,6 +8,12 @@
     name: mongodb-org
     state: present
 
+- name: starting {{COMPONENT}}
+  ansible.builtin.systemd:
+    name: mongod
+    state: restarted
+    enabled: yes
+
 - name: configuring service name to server
   ansible.builtin.shell: "set-hostname {{COMPONENT}}-{{ENV}}"
 
