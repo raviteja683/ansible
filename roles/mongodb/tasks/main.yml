@@ -3,8 +3,11 @@
     src: mongo.repo
     dest: /etc/yum.repos.d/mongodb.repo
 
-- name: install mongodb
+- name: install {{COMPONENT}}
   ansible.builtin.package:
     name: mongodb-org
     state: present
+
+- name: configuring service name to server
+  ansible.builtin.shell: "set-hostname {{COMPONENT}}-{{ENV}}"
 
